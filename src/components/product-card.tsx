@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils";
 export function ProductCard({ product }: { product: Product }) {
   const { addItem, toggleWishlist, wishlist } = useCart();
   const liked = wishlist.includes(product.slug);
-  const defaultWeight = product.weights[0];
+  const defaultWeight = product.weights[0] ?? 250;
   const defaultGrind =
     product.category === "beans" ? "دانه کامل" : "آسیاب اسپرسو";
 
